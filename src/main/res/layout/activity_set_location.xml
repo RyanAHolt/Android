@@ -1,0 +1,63 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/front_page_padding"
+    android:paddingLeft="@dimen/front_page_padding"
+    android:paddingRight="@dimen/front_page_padding"
+    android:paddingTop="@dimen/front_page_padding"
+    tools:context="com.example.ryanholt.weatherapp.FrontPage">
+
+    <EditText
+        android:layout_width="@dimen/address_entry_width"
+        android:layout_height="@dimen/address_entry_height"
+        android:layout_below="@+id/address_label"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/address_entry"
+        android:layout_margin="@dimen/set_location_margin" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/google_maps_height"
+        android:gravity="bottom"
+        tools:context="com.example.ryanholt.weatherapp.SetLocation"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/set_location_label"
+        android:id="@+id/address_label"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="@dimen/set_location_label"
+        android:layout_margin="@dimen/set_location_margin" />
+
+    <Button
+        android:layout_width="@dimen/set_location_button_width"
+        android:layout_height="wrap_content"
+        android:text="@string/set_location_button"
+        android:id="@+id/set_location_button"
+        android:layout_alignTop="@+id/location_back_button"
+        android:layout_alignRight="@+id/address_entry"
+        android:layout_alignEnd="@+id/address_entry" />
+
+    <Button
+        android:layout_width="@dimen/set_location_button_width"
+        android:layout_height="wrap_content"
+        android:text="@string/set_location_back_button"
+        android:id="@+id/location_back_button"
+        android:layout_below="@+id/address_entry"
+        android:layout_toLeftOf="@+id/set_location_button"
+        android:layout_toStartOf="@+id/set_location_button"
+        android:layout_marginRight="@dimen/set_location_margin" />
+
+</RelativeLayout>

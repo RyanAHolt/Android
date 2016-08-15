@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/front_page_padding"
+    android:paddingLeft="@dimen/front_page_padding"
+    android:paddingRight="@dimen/front_page_padding"
+    android:paddingTop="@dimen/front_page_padding"
+    android:background="@drawable/weather_image"
+    tools:context="com.example.ryanholt.weatherapp.FrontPage">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/front_page_text_height"
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:textSize="@dimen/title_font_size"
+        android:id="@+id/textView" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Button
+            android:layout_width="@dimen/front_page_button_width"
+            android:layout_height="@dimen/front_page_button_height"
+            android:text="@string/get_weather_button_text"
+            android:id="@+id/getWeather"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/front_page_button_margin" />
+
+        <Button
+            android:layout_width="@dimen/front_page_button_width"
+            android:layout_height="@dimen/front_page_button_height"
+            android:text="@string/set_location_button_text"
+            android:id="@+id/setLocation"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/front_page_button_margin" />
+
+        <Button
+            android:layout_width="@dimen/front_page_button_width"
+            android:layout_height="@dimen/front_page_button_height"
+            android:text="@string/about_button_text"
+            android:id="@+id/aboutButton"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/front_page_button_margin" />
+    </LinearLayout>
+
+</RelativeLayout>
